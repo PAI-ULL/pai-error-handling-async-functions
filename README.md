@@ -29,9 +29,7 @@ Hasta ahora siempre hemos recurrido al `try/catch` para el manejo de errores, de
 
 No obstante, podemos olvidarnos por completo del `try` y directamente llamar a `.catch()` después de invocar a la función asíncrona, lo cual permite manejar todos los errores de la función asíncrona, incluyendo que retorne una promesa rechazada. Para ejemplificar esto, he dejado un código sencillo en el directorio `src` que pueden mirar, pero lo interesante es lo siguiente:
 ``` js
-/**
- * Async Function that throws an error if a file is not specified
- */
+/* ... */
 const main = async () => {
   if (args.length === 0) {
     throw new Error('[ERROR] A file must be specified as argument');
@@ -42,7 +40,7 @@ const main = async () => {
 main().catch((err) => console.log(err.message));
 ```
 
-Como vemos, no se hizo uso del `try` en ningún momento, sino que la función asíncrona `main` lanza un error de que no se ha especificado un fichero por línea de comandos, y el `catch` detecta el error y en la <i>callback</i> se imprime el mensaje. Este comportamiento puede resultar útil si en una función estamos leyendo un fichero (proceso asíncrono) y queremos manejar cualquier error derivado de la lectura del mismo.
+Como vemos, no se hizo uso del `try` en ningún momento, sino que la función asíncrona `main` lanza un error de que no se ha especificado un fichero por línea de comandos. El `catch` detecta el error y en la <i>callback</i> se imprime el mensaje. Este comportamiento puede resultar útil si en una función estamos leyendo un fichero (proceso asíncrono) y queremos manejar cualquier error derivado de la lectura del mismo.
 
 Además, en el código de prueba podemos ver cómo se maneja correctamente el error generado por `asyncFunction` desde `main`. Nótese el uso del `await` para tratar el error, ya que si no lo hiciéramos saltaría un error de `UnhandledPromiseRejectionWarning`. Recomiendo ejecutar el código e ir modificando a conveniencia para ver qué sucede. 
 
