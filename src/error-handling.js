@@ -16,7 +16,7 @@
 const args = process.argv.slice(2);
 
 /**
- * Async Function that returns a string
+ * Async Function that returns a string if the value is possitive
  * @param {Number} value a possitive value
  * @return {String} test string
  */
@@ -38,4 +38,5 @@ const main = async () => {
   console.log(NEGATIVE); // throws an error
 }
 
+// Handling any error in main
 main().catch((err) => console.log(err.message));
