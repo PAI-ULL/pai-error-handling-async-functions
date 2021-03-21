@@ -42,7 +42,7 @@ main().catch((err) => console.log(err.message));
 
 Como vemos, no se hizo uso del `try` en ningún momento, sino que la función asíncrona `main` lanza un error de que no se ha especificado un fichero por línea de comandos. El `catch` detecta el error y en la <i>callback</i> se imprime el mensaje. Este comportamiento puede resultar útil si en una función estamos leyendo un fichero (proceso asíncrono) y queremos manejar cualquier error derivado de la lectura del mismo.
 
-Además, en el código de prueba podemos ver cómo se maneja correctamente el error generado por `asyncFunction` desde `main`. Nótese el uso del `await` para tratar el error, ya que si no lo hiciéramos saltaría un error de `UnhandledPromiseRejectionWarning`. Recomiendo ejecutar el código e ir modificando a conveniencia para ver qué sucede. 
+Además, en el código de prueba podemos ver cómo se maneja correctamente el error generado por `asyncFunction` desde `main`. Nótese el uso del `await` para tratar el error, ya que si no lo hiciéramos saltaría un aviso `UnhandledPromiseRejectionWarning`. Recomiendo ejecutar el código e ir modificando a conveniencia para ver qué sucede. 
 
 ## Conclusiones
 
