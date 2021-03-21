@@ -6,7 +6,7 @@ El objetivo de este informe es el de explicar las características del manejo de
 
 ## Introducción
 
-Una función asíncrona en JavaScript <b>siempre devuelve una promesa (`Promise`)</b> y es el único tipo de función donde se puede usar la palabra reservada `await`. 
+Una función asíncrona en JavaScript <b>siempre devuelve una [promesa](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) (`Promise`)</b> y es el único tipo de función donde se puede usar el operador `await`.
 
 La expresión `await` pausa la ejecución de la función asíncrona y espera a que la promesa se complete antes de reanudar con la ejecución de la función. Esto nos permite simular comportamiento síncrono en una función asíncrona.
 
