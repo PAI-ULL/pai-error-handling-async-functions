@@ -51,6 +51,9 @@ Las funciones asíncronas permiten simular comportamiento síncrono, y gracias a
 ## Referencias
 
 [The Code Barbarian](http://thecodebarbarian.com/async-functions-in-javascript.html#error-handling)
+
 [Itnext](https://itnext.io/error-handling-with-async-await-in-js-26c3f20bc06a)
+
 [EloquentJS](https://eloquentjavascript.net/11_async.html)
+
 [MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function)
